@@ -1,15 +1,19 @@
-# Finterm Skills
+# The Investment Skill Lexicon
 
-**Agent skills for financial analysis**, from [finterm.ai](https://finterm.ai).
+**A lexicon of the ideas great investors think with**, from
+[finterm.ai](https://finterm.ai).
 
-Each skill packages knowledge **mined from primary sources**, then consolidated,
-cross-checked, and reviewed with Finterm’s analysis tooling, so an agent can apply it
-**without loading the underlying corpus**.
+Decades of investment thinking sit in letters, essays, and filings that few people have
+time to read end to end.
+This project is assembling that material into **agent skills**: each entry distills one
+thinker’s frameworks and mental models **from primary sources**, consolidated and
+cross-checked with Finterm’s analysis tooling, so an agent can apply the ideas **without
+loading the underlying corpus**.
 
-**One skill is published today**, described in full below.
-More may join the family over time.
+**Warren Buffett’s framework is the first entry**, described in full below.
+More will follow.
 
-| Skill | What it does |
+| Entry | What it does |
 | --- | --- |
 | [buffett-investment-framework](skills/buffett-investment-framework/) | Applies Warren Buffett’s investment frameworks and mental models, distilled into 65 decision cards, to financial analysis, investment-memo review, and thesis evaluation. |
 
@@ -229,5 +233,5 @@ The same command works against an installed copy.
 
 ## License
 
-MIT; see [LICENSE](LICENSE). The skills provide analytical guidance, not buy, sell,
+MIT; see [LICENSE](LICENSE). Every entry provides analytical guidance, not buy, sell,
 hold, position-size, or trade instructions, and each documents its own limits.
