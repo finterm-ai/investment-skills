@@ -1,13 +1,13 @@
 # Finterm Skills
 
-Agent skills from [finterm.ai](https://finterm.ai) for financial analysis.
+**Agent skills for financial analysis**, from [finterm.ai](https://finterm.ai).
 
-Each skill packages knowledge mined from primary sources and then consolidated,
+Each skill packages knowledge **mined from primary sources**, then consolidated,
 cross-checked, and reviewed with Finterm’s analysis tooling, so an agent can apply it
-without loading the underlying corpus.
+**without loading the underlying corpus**.
 
-One skill is published today.
-The family may grow; the rest of this page describes the skill that exists now.
+**One skill is published today**, described in full below.
+More may join the family over time.
 
 | Skill | What it does |
 | --- | --- |
@@ -15,14 +15,13 @@ The family may grow; the rest of this page describes the skill that exists now.
 
 ## Buffett Investment Framework
 
-An agent skill for evidence-bounded financial analysis, investment-memo review, and
-thesis evaluation.
-It organizes 65 Buffett-inspired decision cards into focused workflows
-that surface assumptions, counterarguments, missing evidence, and invalidation
-conditions.
+An agent skill for **evidence-bounded financial analysis, investment-memo review, and
+thesis evaluation**. It organizes **65 Buffett-inspired decision cards** into **three
+focused workflows** that surface **assumptions, counterarguments, missing evidence, and
+invalidation conditions**.
 
-The framework helps an agent reason about a business.
-It does not issue buy, sell, hold, entry-price, position-size, or trade instructions.
+The framework helps an agent **reason about a business**. It does not issue buy, sell,
+hold, entry-price, position-size, or trade instructions.
 The complete agent instructions are in
 [SKILL.md](skills/buffett-investment-framework/SKILL.md), which is self-contained once
 installed.
@@ -56,8 +55,8 @@ invalidate each component.
 | Thesis evaluation | `D02`, `D03`, `B01`, `B06`, `V01`, `V04`, `R01`, `R07` | Component map, mechanism and valuation tests, owner-harm paths, and invalidation conditions |
 
 The router starts with five to eight cards, adds only material management, allocation,
-financing, or specialized overlays, and refuses to exceed 12 cards in one pass.
-It never loads all 65 cards by default.
+financing, or specialized overlays, and **refuses to exceed 12 cards in one pass**. It
+**never loads all 65 cards by default**.
 
 ```mermaid
 flowchart LR
@@ -121,8 +120,8 @@ The result ends with an analytical summary, not an investment instruction.
 
 ### How It Was Built
 
-The framework is an editorial synthesis of published Buffett and Berkshire writings, not
-a transcription or an attempt to imitate Buffett’s voice.
+The framework is an **editorial synthesis of published Buffett and Berkshire writings**,
+not a transcription or an attempt to imitate Buffett’s voice.
 The development corpus drew primarily from Berkshire Hathaway annual letters, Buffett’s
 2015 50th-anniversary essay, and “The Superinvestors of Graham-and-Doddsville.”
 
