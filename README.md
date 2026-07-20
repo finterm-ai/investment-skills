@@ -1,14 +1,15 @@
 # The Investment Skill Lexicon
 
-**A lexicon of the ideas great investors think with**, from
-[finterm.ai](https://finterm.ai).
+**An in-depth lexicon of how great investors think, built from primary sources and
+packaged as agent skills that work with Claude Code, Codex, Cursor, and any agent that
+reads the open skills standard.**
 
 Decades of investment thinking sit in letters, essays, and filings that few people have
 time to read end to end.
-This project is assembling that material into **agent skills**: each entry distills one
-thinker’s frameworks and mental models **from primary sources**, consolidated and
-cross-checked with Finterm’s analysis tooling, so an agent can apply the ideas **without
-loading the underlying corpus**.
+This project, from [finterm.ai](https://finterm.ai), is assembling that material one
+entry at a time: each distills a thinker’s frameworks and mental models from their own
+published writing, consolidated and cross-checked with Finterm’s analysis tooling, so an
+agent can apply the ideas **without loading the underlying corpus**.
 
 **Warren Buffett’s framework is the first entry**, described in full below.
 More will follow.
