@@ -236,9 +236,6 @@ The same command works against an installed copy.
 
 MIT; see [LICENSE](LICENSE).
 
-This project is published as open-source reference material.
-It is **not investment advice** and should not be treated as such.
-Nothing here is a recommendation by finterm.ai to buy, sell, or hold any security, and
-finterm.ai accepts no liability for investment decisions you or your agents make, or for
-any outcome of those decisions.
-Verify anything you rely on against primary sources and your own judgment.
+This project is open-source reference material, **not investment advice**. finterm.ai
+makes no recommendation to buy, sell, or hold any security and accepts no liability for
+investment decisions you or your agents make.
