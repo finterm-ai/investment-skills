@@ -28,23 +28,23 @@ installed.
 
 ### Try It
 
+Ask in your own words and attach the evidence.
+The skill picks the workflow and loads only the cards that fit:
+
 ```text
-Use $buffett-investment-framework to analyze these filings. Reconcile reported earnings
-to owner earnings, test capital efficiency and obligations, and identify every blocked
-calculation.
+What are the real owner earnings in these filings?
 ```
 
 ```text
-Use $buffett-investment-framework to review this investment memo claim by claim. Separate
-facts, calculations, and inference; test the moat and valuation mechanisms; and return
-supported, challenged, or unresolved findings.
+Review this investment memo and tell me which claims hold up.
 ```
 
 ```text
-Use $buffett-investment-framework to evaluate this thesis. Preserve its meaning, build
-the strongest contrary account, test value separately from price, and state what would
-invalidate each component.
+Here is my thesis on this company. What would prove it wrong?
 ```
+
+Most agents load the skill from its description, so naming it is optional.
+In Codex, type `$` to mention it explicitly.
 
 ### Three Workflows
 
