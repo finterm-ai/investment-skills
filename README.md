@@ -16,7 +16,28 @@ One skill is published today; the family may grow.
 
 ## Install
 
-Copy a skill folder into the skill directory your agent reads.
+Use the [`skills` CLI](https://github.com/vercel-labs/skills), which installs into
+whichever agent directories it detects:
+
+```bash
+npx skills add finterm-ai/skills                       # choose interactively
+npx skills add finterm-ai/skills --skill buffett-investment-framework --yes
+```
+
+Add `-g` to install for your user instead of the current project, `--copy` to install an
+independent snapshot rather than a symlink, and `--list` to see what a repository offers
+without installing it.
+
+For automation, pin both the installer and the source commit so a run installs exactly
+the code and content you reviewed:
+
+```bash
+npx --yes skills@1.5.14 add \
+  https://github.com/finterm-ai/skills/tree/f844999a3d73ad8c0b36573c5c4ccf2e795d7e49 \
+  --skill buffett-investment-framework --copy --yes
+```
+
+To install without the CLI, copy the skill folder into the directory your agent reads.
 From this repository’s root:
 
 ```bash
@@ -32,9 +53,13 @@ cp -R buffett-investment-framework your-project/.claude/skills/
 cp -R buffett-investment-framework "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-Each skill folder is self-contained: a `SKILL.md`, its reference modules, and a
-standard-library runtime script, with no network, database, or package-manager
-dependency.
+Either way the installed folder is self-contained: a `SKILL.md`, its reference modules,
+and a standard-library runtime script, with no network, database, or package-manager
+dependency. Verify an installed copy at any time:
+
+```bash
+python3 <skills-dir>/buffett-investment-framework/scripts/framework.py validate
+```
 
 ## License
 
