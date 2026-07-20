@@ -20,6 +20,6 @@ jobs:
         with:
           python-version: "3.11"
       - name: Validate package
-        run: python3 buffett-investment-framework/scripts/framework.py validate
+        run: python3 skills/buffett-investment-framework/scripts/framework.py validate
       - name: Compile runtime
-        run: python3 -m py_compile buffett-investment-framework/scripts/framework.py
+        run: python3 -m py_compile skills/buffett-investment-framework/scripts/framework.py
