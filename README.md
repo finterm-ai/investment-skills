@@ -1,7 +1,7 @@
 # The Investment Skill Lexicon
 
-**An in-depth lexicon of how great investors think, built from primary sources and
-packaged as agent skills that work with Claude Code, Codex, Cursor, and any agent that
+**An in-depth reference of skills that distill how great investors think.
+Built from primary sources and packaged for Claude Code, Codex, or any other agent that
 reads the open skills standard.**
 
 Decades of investment thinking sit in letters, essays, and filings that few people have
@@ -232,7 +232,13 @@ IDs, and workspace paths.
 It does not validate financial facts, source interpretations, or investment outcomes.
 The same command works against an installed copy.
 
-## License
+## License and Disclaimer
 
-MIT; see [LICENSE](LICENSE). Every entry provides analytical guidance, not buy, sell,
-hold, position-size, or trade instructions, and each documents its own limits.
+MIT; see [LICENSE](LICENSE).
+
+This project is published as open-source reference material.
+It is **not investment advice** and should not be treated as such.
+Nothing here is a recommendation by finterm.ai to buy, sell, or hold any security, and
+finterm.ai accepts no liability for investment decisions you or your agents make, or for
+any outcome of those decisions.
+Verify anything you rely on against primary sources and your own judgment.
