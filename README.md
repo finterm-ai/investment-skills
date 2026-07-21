@@ -1,29 +1,37 @@
 # The Investment Skill Lexicon
 
-**An in-depth reference of skills that distill how great investors think.
-Built from primary sources and packaged for Claude Code, Codex, or any other agent that
-reads the open skills standard.**
+**An in-depth reference of agent skills that distill how great investors think.**
 
-## Research Scale
+Decades of investment thinking sit in writings, interviews, and filings that few people
+have time to read end to end.
 
-| Stage | Contents | Scale |
-| --- | --- | --- |
-| Source corpus | 48 Berkshire shareholder letters (1977–2024), Greg Abel’s 2025 transition letter, the 1957–1970 Buffett Partnership letter compilation, other Buffett and Berkshire writings, *The Essays of Warren Buffett*, and *Buffett: The Making of an American Capitalist* | **72 documents · about 2,300 pages · 951,798 words** |
-| Extraction | Source-native insights distilled from the corpus | **3,809 insights** |
-| Processing | Codex Sol | **about 3.15 billion tokens** |
-| Processing | Claude, including Fable | **about 241 million tokens** |
-| Skills lexicon | Final task-facing output | **65 cards · 8 modules · about 51 pages** |
+## What Is This?
 
-The skill loads only the 5–12 cards relevant to a task.
+This project analyzes an investor or firm’s frameworks and mental models from primary
+sources like published writings, interviews, and filings, cross-checked with Finterm’s
+analysis tooling.
 
-Decades of investment thinking sit in letters, essays, and filings that few people have
-time to read end to end.
-This project, from [finterm.ai](https://finterm.ai), is assembling that material one
-entry at a time: each distills a thinker’s frameworks and mental models from their own
-published writing, consolidated and cross-checked with Finterm’s analysis tooling, so an
-agent can apply the ideas **without loading the underlying corpus**.
+An agent can apply the ideas in new situations without filling the context with the
+underlying corpus.
 
-**Warren Buffett’s framework is the first entry**, described in full below.
+A few such projects already exist, but many either superficially impersonate an
+investor’s writing or are fairly shallow.
+
+Our goals here are:
+- **Broader extraction:** Use all available primary sources.
+  Fully process all of an input corpus and extract all plausible insights as a
+  preliminary step.
+- **Deeper insight:** Aim to uncover underlying, reusable mental frameworks.
+- **Reusable format:** The results are packaged in usable skill format for Claude Code,
+  Codex, or any other agent that reads the open skills standard.
+
+The idea is we should spend tokens and heavy thinking up front processing every
+available source and analyzing what insights are most compelling, then make it available
+cheaply to any agent or model.
+
+## The Buffett Investment Framework
+
+**The Buffett investment framework** is the first package in the skill lexicon.
 More will follow.
 
 | Entry | What it does |
@@ -32,16 +40,26 @@ More will follow.
 
 ## Buffett Investment Framework
 
-An agent skill for **evidence-bounded financial analysis, investment-memo review, and
-thesis evaluation**. It organizes **65 Buffett-inspired decision cards** into **three
-focused workflows** that surface **assumptions, counterarguments, missing evidence, and
-invalidation conditions**.
+This is an agent skill for **evidence-bounded financial analysis, investment-memo
+review, and thesis evaluation**.
 
-The framework helps an agent **reason about a business**. It does not issue buy, sell,
-hold, entry-price, position-size, or trade instructions.
+It organizes **65 Buffett-inspired decision cards** into **three focused workflows**
+that surface **assumptions, counterarguments, missing evidence, and invalidation
+conditions**.
+
+The framework helps an agent reason about a business.
+It does not issue buy, sell, hold, entry-price, position-size, or trade instructions.
 The complete agent instructions are in
 [SKILL.md](skills/buffett-investment-framework/SKILL.md), which is self-contained once
 installed.
+
+| Stage | Contents | Scale |
+| --- | --- | --- |
+| Source corpus | 48 Berkshire shareholder letters (1977–2024), Greg Abel’s 2025 transition letter, the 1957–1970 Buffett Partnership letter compilation, other Buffett and Berkshire writings, *The Essays of Warren Buffett*, and *Buffett: The Making of an American Capitalist* | **72 documents (2,300 pages, 950K words)** |
+| Extraction | Source-native insights distilled from the corpus | **3,809 insights** |
+| Processing | Codex Sol | **3.15 billion tokens** |
+| Processing | Claude, including Fable | **about 241 million tokens** |
+| Skills lexicon | Final task-facing output | **65 cards · 8 modules · about 51 pages** |
 
 ### Try It
 
