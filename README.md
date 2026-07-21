@@ -4,6 +4,26 @@
 Built from primary sources and packaged for Claude Code, Codex, or any other agent that
 reads the open skills standard.**
 
+## Research Scale
+
+The Buffett lexicon is distilled from a **72-document research corpus** centered on
+Buffett and Berkshire: **69 official sources**, one partnership-letter compilation, and
+two supporting books.
+The paginated material covers **1,466 recorded PDF and print pages**; with 23
+unpaginated HTML sources, the full corpus contains **951,798 content words**.
+
+The extraction pipeline promoted **3,809 source-native insight records**. Retained
+processing telemetry through the v0.1.0 research cutoff records **3.15 billion Codex Sol
+tokens** and **241 million Claude tokens**, including Claude Fable across all eight
+audited Claude sessions.
+Provider counters include cached context, use different semantics, and are not billing
+figures.
+
+The research was editorially distilled into a self-contained skills lexicon of **65
+decision cards** across **8 modules** and **3 workflows**. The final skill is **15,533
+words** in **12 files** (**124,930 bytes**) and loads only the 5–12 cards relevant to a
+task.
+
 Decades of investment thinking sit in letters, essays, and filings that few people have
 time to read end to end.
 This project, from [finterm.ai](https://finterm.ai), is assembling that material one
@@ -239,3 +259,7 @@ MIT; see [LICENSE](LICENSE).
 This project is open-source reference material, **not investment advice**. finterm.ai
 makes no recommendation to buy, sell, or hold any security and accepts no liability for
 investment decisions you or your agents make.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->
