@@ -2,10 +2,10 @@
 
 **An in-depth reference of agent skills that distill how great investors think.**
 
+## What Is This?
+
 Decades of investment thinking sit in writings, interviews, and filings that few people
 have time to read end to end.
-
-## What Is This?
 
 This project analyzes an investor or firm’s frameworks and mental models from primary
 sources like published writings, interviews, and filings, cross-checked with Finterm’s
@@ -31,9 +31,9 @@ The idea is we should spend tokens and heavy thinking up front processing every
 available source and analyzing what insights are most compelling, then make it available
 cheaply to any agent or model.
 
-Our first package is the Buffett framework.
-But consider bookmarking this as we are refining the extractions and will add more
-each week!
+The first package here is the Buffett framework.
+Consider bookmarking this as we are refining the extractions and will add more each
+week!
 
 | Entry | What it does |
 | --- | --- |
@@ -96,18 +96,7 @@ The router starts with 5–8 cards, adds only material management, allocation, f
 or specialized overlays, and **refuses to exceed 12 cards in one pass**. It **never
 loads all 65 cards by default**.
 
-```mermaid
-flowchart LR
-  Q["Supplied task and evidence"] --> T{"Choose workflow"}
-  T -->|"Filed package"| F["Financial analysis"]
-  T -->|"Memo"| M["Memo review"]
-  T -->|"Explicit thesis"| H["Thesis evaluation"]
-  F --> R["Route 5–12 cards"]
-  M --> R
-  H --> R
-  R --> C["Read matching modules"]
-  C --> O["Supported / challenged / unresolved"]
-```
+![Map of the buffett-investment-framework package: SKILL.md entry point and router, three workflows, and 65 cards in eight modules](images/buffett-investment-framework-map.png)
 
 ### Eight Modules
 
