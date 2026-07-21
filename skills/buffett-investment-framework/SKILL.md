@@ -14,7 +14,8 @@ into investment actions.
 1. Classify the request as `financial-analysis`, `memo-review`, or `thesis-evaluation`.
 2. Confirm that the required primary evidence is present.
 3. Route to an ordinary load of five to 12 cards.
-4. Read only the reference modules containing those cards.
+4. Read only the reference modules containing those cards, or print single routed cards
+   with `show --id`.
 5. Apply each card’s question, actions, output, and limits.
 6. Return supported, challenged, or unresolved findings using the output contract.
 

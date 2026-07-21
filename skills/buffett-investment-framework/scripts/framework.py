@@ -57,6 +57,7 @@ TOPIC_CARDS = {
     "succession": ("M07", "M08"),
     "valuation": ("V01", "V03", "V05", "V06"),
     "capital-allocation": ("C01", "C03", "C04"),
+    "dilution": ("C01", "C07"),
     "acquisition": ("C08", "C09"),
     "leverage": ("F07", "R01", "R02", "R03"),
     "insurance": ("S01", "S02", "S03"),
