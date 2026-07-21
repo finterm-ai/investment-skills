@@ -66,7 +66,14 @@ installed.
 
 ### Try It
 
-Ask in your own words and attach the evidence.
+Install with the [`skills` CLI](https://github.com/vercel-labs/skills) (more options
+under [Install](#install)):
+
+```bash
+npx skills add finterm-ai/skills --skill buffett-investment-framework --yes
+```
+
+Then ask in your own words and attach the evidence.
 The skill picks the workflow and loads only the cards that fit:
 
 ```text
@@ -200,7 +207,6 @@ Use the [`skills` CLI](https://github.com/vercel-labs/skills), which installs in
 whichever agent directories it detects:
 
 ```bash
-npx skills add finterm-ai/skills                       # choose interactively
 npx skills add finterm-ai/skills --skill buffett-investment-framework --yes
 ```
 
