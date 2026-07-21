@@ -4,6 +4,18 @@
 Built from primary sources and packaged for Claude Code, Codex, or any other agent that
 reads the open skills standard.**
 
+## Research Scale
+
+| Stage | Contents | Scale |
+| --- | --- | --- |
+| Source corpus | 48 Berkshire shareholder letters (1977–2024), Greg Abel’s 2025 transition letter, the 1957–1970 Buffett Partnership letter compilation, other Buffett and Berkshire writings, *The Essays of Warren Buffett*, and *Buffett: The Making of an American Capitalist* | **72 documents · about 2,300 pages · 951,798 words** |
+| Extraction | Source-native insights distilled from the corpus | **3,809 insights** |
+| Processing | Codex Sol | **about 3.15 billion tokens** |
+| Processing | Claude, including Fable | **about 241 million tokens** |
+| Skills lexicon | Final task-facing output | **65 cards · 8 modules · about 51 pages** |
+
+The skill loads only the 5–12 cards relevant to a task.
+
 Decades of investment thinking sit in letters, essays, and filings that few people have
 time to read end to end.
 This project, from [finterm.ai](https://finterm.ai), is assembling that material one
@@ -239,3 +251,7 @@ MIT; see [LICENSE](LICENSE).
 This project is open-source reference material, **not investment advice**. finterm.ai
 makes no recommendation to buy, sell, or hold any security and accepts no liability for
 investment decisions you or your agents make.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->
