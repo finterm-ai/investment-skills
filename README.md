@@ -2,7 +2,7 @@
 
 **An in-depth reference of agent skills that distill how great investors think.**
 
-## What Is This?
+## Why?
 
 Decades of investment thinking sit in writings, interviews, and filings that few people
 have time to read end to end.
@@ -14,15 +14,19 @@ data sources and analysis tooling.
 An agent can apply the ideas in new situations without filling the context with the
 underlying corpus.
 
-Such projects already exist, but many either superficially impersonate an investor’s
-writing or stay shallow.
+## How Are These Skills Different?
 
-Our goals here are:
+A simple prompt or skill can lead a model to emulate style superficially.
+But our goal is not to imitate the style of an investor.
+
+We want to give thorough, accurate context so agents apply mental frameworks rigorously.
+Our goals are:
+
 - **Broad extraction:** Use all available primary sources.
   Fully process all of an input corpus and extract all plausible insights as a
   preliminary step.
-- **Deep insights:** Aim to uncover underlying, reusable mental frameworks these
-  investors use.
+- **Deep insights:** Analyze materials to uncover underlying, non-obvious mental
+  frameworks talented investors use.
 - **Reusable format:** The results are packaged in usable skill format for Claude Code,
   Codex, or any other agent that reads the open [Agent Skills](https://agentskills.io)
   standard.
@@ -31,7 +35,10 @@ The idea is we should spend tokens and heavy thinking up front processing every
 available source and analyzing what insights are most compelling, then make it available
 cheaply to any agent or model.
 
-The first package here is the Buffett framework.
+## A Growing Collection of Skills
+
+We see this “lexicon” as a growing collection.
+The first piece is the Buffett framework.
 Consider bookmarking this as we are refining the extractions and will add more each
 week!
 
@@ -41,14 +48,13 @@ week!
 
 ## The Buffett Investment Framework
 
-**The Buffett investment framework** is the first package in the Investment Skill
-Lexicon. More will follow.
-It is an agent skill for **evidence-bounded financial analysis, investment-memo review,
-and thesis evaluation**.
+**The Buffett investment framework** distills 950,000 words of primary Buffett and
+Berkshire writing into **65 evidence-bounded decision cards** an agent can use.
 
-It organizes **65 Buffett-inspired decision cards** into **three focused workflows**
-that surface **assumptions, counterarguments, missing evidence, and invalidation
-conditions**.
+It is an agent skill for **evidence-bounded financial analysis, investment-memo review,
+and thesis evaluation**. It offers **three focused workflows** that surface
+**assumptions, counterarguments, missing evidence, and invalidation conditions**. Cards
+are loaded 5–12 at a time to keep context use efficient.
 
 The framework helps an agent reason about a business.
 It does not issue buy, sell, hold, entry-price, position-size, or trade instructions.
@@ -60,8 +66,7 @@ installed.
 | --- | --- | --- |
 | Source corpus | 48 Berkshire shareholder letters (1977–2024), Greg Abel’s 2025 transition letter, the 1957–1970 Buffett Partnership letter compilation, other Buffett and Berkshire writings, *The Essays of Warren Buffett*, and *Buffett: The Making of an American Capitalist* | **72 documents (2,300 pages, 950,000 words)** |
 | Extraction | Source-native insights distilled from the corpus | **3,809 insights** |
-| Processing | Codex Sol | **3.15 billion tokens** |
-| Processing | Claude, including Fable | **about 241 million tokens** |
+| Processing | Extraction and synthesis ran across Codex Sol and Claude Fable | **about 3.4 billion tokens** |
 | Skill lexicon | Final task-facing output | **65 cards · 8 modules · about 51 pages** |
 
 ### Try It
@@ -262,6 +267,12 @@ IDs, routing bounds, local links and anchors, and absence of draft labels, opaqu
 IDs, and workspace paths.
 It does not validate financial facts, source interpretations, or investment outcomes.
 The same command works against an installed copy.
+
+## Development
+
+Contributor docs live in [development.md](development.md) (make targets for validation
+and the package-map images) and [viz/README.md](viz/README.md) (the interactive canvas
+behind those images).
 
 ## License and Disclaimer
 
