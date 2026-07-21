@@ -9,8 +9,8 @@ reads the open skills standard.**
 The Buffett lexicon is distilled from a **72-document research corpus** centered on
 Buffett and Berkshire: **69 official sources**, one partnership-letter compilation, and
 two supporting books.
-The paginated material covers **1,466 recorded PDF and print pages**; with 23
-unpaginated HTML sources, the full corpus contains **951,798 content words**.
+Together, the corpus spans about **2,300 source pages** and **951,798 content words**,
+using recorded PDF and EPUB pagination and a 275-word-per-page estimate for HTML.
 
 The extraction pipeline promoted **3,809 source-native insight records**. Retained
 processing telemetry through the v0.1.0 research cutoff records **3.15 billion Codex Sol
@@ -20,9 +20,8 @@ Provider counters include cached context, use different semantics, and are not b
 figures.
 
 The research was editorially distilled into a self-contained skills lexicon of **65
-decision cards** across **8 modules** and **3 workflows**. The final skill is **15,533
-words** in **12 files** (**124,930 bytes**) and loads only the 5–12 cards relevant to a
-task.
+decision cards** across **8 modules**, totaling about **51 pages** at 275 words per
+page. The skill loads only the 5–12 cards relevant to a task.
 
 Decades of investment thinking sit in letters, essays, and filings that few people have
 time to read end to end.
