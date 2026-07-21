@@ -6,22 +6,15 @@ reads the open skills standard.**
 
 ## Research Scale
 
-The Buffett lexicon is distilled from a **72-document research corpus** centered on
-Buffett and Berkshire: **69 official sources**, one partnership-letter compilation, and
-two supporting books.
-Together, the corpus spans about **2,300 source pages** and **951,798 content words**,
-using recorded PDF and EPUB pagination and a 275-word-per-page estimate for HTML.
+| Stage | Contents | Scale |
+| --- | --- | --- |
+| Source corpus | 48 Berkshire shareholder letters (1977–2024), Greg Abel’s 2025 transition letter, the 1957–1970 Buffett Partnership letter compilation, other Buffett and Berkshire writings, *The Essays of Warren Buffett*, and *Buffett: The Making of an American Capitalist* | **72 documents · about 2,300 pages · 951,798 words** |
+| Extraction | Source-native insights distilled from the corpus | **3,809 insights** |
+| Processing | Codex Sol | **about 3.15 billion tokens** |
+| Processing | Claude, including Fable | **about 241 million tokens** |
+| Skills lexicon | Final task-facing output | **65 cards · 8 modules · about 51 pages** |
 
-The extraction pipeline promoted **3,809 source-native insight records**. Retained
-processing telemetry through the v0.1.0 research cutoff records **3.15 billion Codex Sol
-tokens** and **241 million Claude tokens**, including Claude Fable across all eight
-audited Claude sessions.
-Provider counters include cached context, use different semantics, and are not billing
-figures.
-
-The research was editorially distilled into a self-contained skills lexicon of **65
-decision cards** across **8 modules**, totaling about **51 pages** at 275 words per
-page. The skill loads only the 5–12 cards relevant to a task.
+The skill loads only the 5–12 cards relevant to a task.
 
 Decades of investment thinking sit in letters, essays, and filings that few people have
 time to read end to end.
