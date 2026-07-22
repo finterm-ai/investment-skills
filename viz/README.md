@@ -1,8 +1,8 @@
 # Skills-Layout Canvas: Buffett Framework
 
 A self-contained, interactive map of how the `buffett-investment-framework` skill is
-organized — the `SKILL.md` entry point, its three workflows, the eight reference modules
-holding all 65 cards, and the router script — rendered with the metaproc ELK compound
+organized—the `SKILL.md` entry point, its three workflows, the eight reference modules
+holding all 65 cards, and the router script—rendered with the metaproc ELK compound
 canvas and built to export a clean tall poster PNG for the skill’s README.
 
 The directory has no external dependencies at runtime: every asset lives in `vendor/`,
@@ -42,12 +42,13 @@ and sibling order follows the data instead of crossing minimization.
 ## Node Types
 
 One box shape everywhere; color carries the type semantics: each box gets a dark icon
-and a light background tint of the same hue (inverted in dark mode). Sparkle (violet)
-for the skill root, folder (amber) for directories and card modules, workflow glyph
-(teal) for the three task intents, file-text (warm tan) for plain files, and a
-bulleted list (blue) for the 65 cards. Identity is never color-alone — the glyph and
-label always carry it. Siblings render in data order: `00-source-key` first, modules
-01–08, and cards in ID order within each module.
+and a light background tint of the same hue (inverted in dark mode).
+Sparkle (violet) for the skill root, folder (amber) for directories and card modules,
+workflow glyph (teal) for the three task intents, file-text (warm tan) for plain files,
+and a bulleted list (blue) for the 65 cards.
+Identity is never color-alone—the glyph and label always carry it.
+Siblings render in data order: `00-source-key` first, modules 01–08, and cards in ID
+order within each module.
 
 ## PNG Capture Mode
 
@@ -57,8 +58,8 @@ It needs Google Chrome, macOS `sips`, and `uv` (pillow runs via `uvx`). To refre
 README image in a consuming repo, point it at that repo’s image directory, e.g.
 `./generate-posters.sh ../images`.
 
-Under the hood, `?capture` renders just the map — no header, toolbar, chevrons, or
-scrollbars, zoom pinned at exactly 100%, saved view state ignored — reports the capture
+Under the hood, `?capture` renders just the map—no header, toolbar, chevrons, or
+scrollbars, zoom pinned at exactly 100%, saved view state ignored—reports the capture
 size (map plus a 16px border) in the document title as `capture <w>x<h>`, and declares a
 matching single `@page` for PDF export.
 `?capture=all` does the same with every group expanded; `&theme=dark` forces the dark
@@ -71,7 +72,7 @@ screenshot at exactly the reported `<w>x<h>` window size does work when a quick
 single-theme capture is enough.)
 
 Poster typography is set in the page CSS: card titles and frame headers both size from
-the `--viz-header-font-size` token (16px here — element-level `font-size` never reaches
+the `--viz-header-font-size` token (16px here—element-level `font-size` never reaches
 the title row), boxes and ELK spacing are tightened, and a measurement floor
 (`.viz-node.viz-measure { min-width: 300px }`) puts most card titles on one line.
 
