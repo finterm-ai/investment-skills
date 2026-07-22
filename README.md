@@ -35,17 +35,6 @@ The idea is we should spend tokens and heavy thinking up front processing every
 available source and analyzing what insights are most compelling, then make it available
 cheaply to any agent or model.
 
-## A Growing Collection of Skills
-
-We see this “lexicon” as a growing collection.
-The first piece is the Buffett framework.
-Consider bookmarking this as we are refining the extractions and will add more each
-week!
-
-| Entry | What it does |
-| --- | --- |
-| [buffett-investment-framework](skills/buffett-investment-framework/) | Applies Warren Buffett’s investment frameworks and mental models, distilled into 65 decision cards, to financial analysis, investment-memo review, and thesis evaluation. |
-
 ## The Buffett Investment Framework
 
 **The Buffett investment framework** distills 950,000 words of primary Buffett and
@@ -69,13 +58,33 @@ installed.
 | Processing | Extraction and synthesis ran across Codex Sol and Claude Fable | **about 3.4 billion tokens** |
 | Skill lexicon | Final task-facing output | **65 cards · 8 modules · about 51 pages** |
 
+## A Growing Collection of Skills
+
+We see this “lexicon” as a growing collection.
+The first piece is the Buffett framework.
+Consider bookmarking this as we are refining the extractions and will add more each
+week!
+
+| Investor | Status | Primary sources | Framework focus |
+| --- | --- | --- | --- |
+| Warren Buffett | ✅ Complete | 48 Berkshire shareholder letters (1977–2024), the 1957–1970 partnership letters, *The Essays of Warren Buffett*, and *Buffett: The Making of an American Capitalist* | [buffett-investment-framework](skills/buffett-investment-framework/) applies Buffett’s investment frameworks and mental models, distilled into 65 decision cards, to financial analysis, investment-memo review, and thesis evaluation |
+| Charlie Munger | Queued | *Poor Charlie’s Almanack* (the Stripe Press edition is free online), Wesco Financial and Daily Journal meeting transcripts, “The Psychology of Human Misjudgment” | Mental models, inversion, and the psychology of misjudgment |
+| Benjamin Graham | Queued | *Security Analysis*, *The Intelligent Investor*, Graham-Newman letters, 1955 congressional testimony, late lectures | Margin of safety, Mr. Market, and quantitative value screens |
+| Howard Marks | Queued | About 160 Oaktree client memos (1990–present, public archive), *The Most Important Thing*, *Mastering the Market Cycle* | Risk versus loss, market cycles, and second-level thinking |
+| Philip Fisher | Queued | *Common Stocks and Uncommon Profits*, *Conservative Investors Sleep Well*, *Developing an Investment Philosophy* | Scuttlebutt research and the fifteen-point growth checklist |
+| Peter Lynch | Queued | *One Up on Wall Street*, *Beating the Street*, Worth magazine columns | Stock categories, growth at a reasonable price, and the everyday-knowledge edge |
+| Nick Sleep and Qais Zakaria | Queued | The Nomad Investment Partnership letters, 2001–2014, released free by the authors | Scale economies shared, destination analysis, and the cost of growth |
+| Jeremy Grantham | Queued | GMO quarterly letters and Viewpoints (public archive) | Bubbles, mean reversion, and asset-class regimes |
+| Joel Greenblatt | Queued | *You Can Be a Stock Market Genius*, *The Little Book That Beats the Market*, Columbia special-situations lectures | Spinoffs, special situations, and where structural mispricing hides |
+| Stanley Druckenmiller | Queued | Three decades of long-form talks and interviews, including the transcribed 2015 Lost Tree Club speech | Concentrated macro positioning, asymmetric bet sizing, and liquidity-regime reading |
+
 ### Try It
 
 Install with the [`skills` CLI](https://github.com/vercel-labs/skills) (more options
 under [Install](#install)):
 
 ```bash
-npx skills add finterm-ai/skills --skill buffett-investment-framework --yes
+npx skills add finterm-ai/investment-skills --skill buffett-investment-framework --yes
 ```
 
 Then ask in your own words and attach the evidence.
@@ -155,7 +164,18 @@ Every completed analysis reports:
 7. Limits and blocked branches.
 8. Monitoring evidence and invalidation conditions.
 
-The result ends with an analytical summary, not an investment instruction.
+The result ends with an analytical summary.
+
+### Design Notes
+
+- **Deterministic routing.** `scripts/framework.py` is a standard-library Python script;
+  no model chooses the card load.
+  The same intent and topics always produce the same cards.
+- **A hard card cap.** 5–12 cards per pass: agent context is treated as a budget.
+- **A one-command validator.** `validate` checks the 65-card namespace and per-card
+  field contracts.
+- **A structural authority boundary.** Cards return supported, challenged, or unresolved
+  findings.
 
 ### How It Was Built
 
@@ -173,6 +193,30 @@ The material was distilled in four steps:
    evidence needs or failure conditions differ.
 4. Project the result into 65 consistent cards, eight modules, and three task workflows.
 
+```mermaid
+flowchart LR
+    corpus["<b>Source corpus</b><br/>primary writings, letters,<br/>interviews, filings"]
+    extract["<b>1 · Extract</b><br/>source-native insights,<br/>identity preserved"]
+    inventory["<b>2 · Inventory</b><br/>recurring decision questions,<br/>before any taxonomy"]
+    reconcile["<b>3 · Reconcile</b><br/>overlapping questions merged<br/>or split by consequence"]
+    project["<b>4 · Project</b><br/>consistent cards, modules,<br/>and task workflows"]
+    corroborate["<b>Corroborate</b><br/>every card re-checked against<br/>the full landed collection"]
+    validate["<b>Validate</b><br/>one command: contracts,<br/>sources, routing, links"]
+    use["<b>Agent use</b><br/>router loads a small card<br/>set per task, never all"]
+
+    corpus --> extract --> inventory --> reconcile --> project
+    project --> corroborate --> validate --> use
+
+    classDef src fill:#f5f0e1,stroke:#b8a878,color:#1f2328;
+    classDef step fill:#e9f2fc,stroke:#7ba7d7,color:#1f2328;
+    classDef check fill:#e3f3ee,stroke:#6fb39c,color:#1f2328;
+    classDef out fill:#f1ecfa,stroke:#a68fd8,color:#1f2328;
+    class corpus src
+    class extract,inventory,reconcile,project step
+    class corroborate,validate check
+    class use out
+```
+
 The published cards provide representative, not exhaustive, coverage.
 The process prioritized recurring decision questions rather than attempting to map every
 passage in the source material.
@@ -185,9 +229,10 @@ reviews, independent corroboration, or a substitute for checking the original wr
 and the company evidence under analysis.
 
 After synthesis, every card was reconciled against the project’s full landed source
-collection: Berkshire letters from 1977 through 2025, the partnership letters, the
-Owner’s Manual, the 50th-anniversary essays, Buffett’s later public letters and
-comments, *The Essays of Warren Buffett* arrangement, and the Lowenstein biography.
+collection: Berkshire letters from 1977 through 2024, the 2025 transition and farewell
+letters, the partnership letters, the Owner’s Manual, the 50th-anniversary essays,
+Buffett’s later public letters and comments, *The Essays of Warren Buffett* arrangement,
+and the Lowenstein biography.
 Each card carries abbreviated corroboration citations naming additional checked
 locations where its point is stated, applied, or qualified; the
 [source key](skills/buffett-investment-framework/references/00-source-key.md) resolves
@@ -212,7 +257,7 @@ Use the [`skills` CLI](https://github.com/vercel-labs/skills), which installs in
 whichever agent directories it detects:
 
 ```bash
-npx skills add finterm-ai/skills --skill buffett-investment-framework --yes
+npx skills add finterm-ai/investment-skills --skill buffett-investment-framework --yes
 ```
 
 Add `-g` to install for your user instead of the current project, `--copy` to install an
@@ -227,7 +272,7 @@ code and content you reviewed:
 
 ```bash
 npx --yes skills@1.5.14 add \
-  https://github.com/finterm-ai/skills/tree/v0.1.0 \
+  https://github.com/finterm-ai/investment-skills/tree/v0.1.0 \
   --skill buffett-investment-framework --copy --yes
 ```
 
@@ -248,8 +293,8 @@ cp -R skills/buffett-investment-framework "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Either way the installed folder is self-contained: a `SKILL.md`, its reference modules,
-and a standard-library runtime script, with no network, database, package-manager, or
-repository dependency.
+a standard-library runtime script, and an agents manifest, with no network, database,
+package-manager, or repository dependency.
 
 ## Validate or Inspect It
 
