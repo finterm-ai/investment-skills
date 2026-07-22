@@ -154,18 +154,18 @@ Do not aggregate component dispositions into an investment recommendation.
 
 Every response must contain:
 
-1. **Question and scope** — task intent, horizon, entity, and exclusions.
-2. **Evidence receipt** — supplied primary evidence, periods, missing inputs, and source
+1. **Question and scope:** task intent, horizon, entity, and exclusions.
+2. **Evidence receipt:** supplied primary evidence, periods, missing inputs, and source
    limitations.
-3. **Card load** — five to 12 IDs and why each was selected.
-4. **Analytical work** — sourced bridges, calculations, mechanism tests, and
+3. **Card load:** five to 12 IDs and why each was selected.
+4. **Analytical work:** sourced bridges, calculations, mechanism tests, and
    sensitivities.
-5. **Findings** — supported, challenged, or unresolved, one decision question at a time.
-6. **Counterevidence and alternatives** — strongest contrary account and competing
+5. **Findings:** supported, challenged, or unresolved, one decision question at a time.
+6. **Counterevidence and alternatives:** strongest contrary account and competing
    mechanism.
-7. **Limits and blocked branches** — missing evidence and uncertainty that affect the
+7. **Limits and blocked branches:** missing evidence and uncertainty that affect the
    result.
-8. **Monitoring and invalidation** — observations that would strengthen, weaken, revise,
+8. **Monitoring and invalidation:** observations that would strengthen, weaken, revise,
    or retire each material finding.
 
 End with an analytical summary, not a buy, sell, hold, entry-price, position-size, or
