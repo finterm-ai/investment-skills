@@ -81,6 +81,23 @@ REQUIRED_CARD_FIELDS = (
     "Corroboration",
 )
 SOURCE_KEY_FILE = "references/00-source-key.md"
+RETRIEVAL_SECTION_HEADING = "## Where to Retrieve Each Source"
+RETRIEVAL_KEY_FORMS = (
+    "BH<year>",
+    "BPL<year>",
+    "OM1996",
+    "SI1984",
+    "WB50-2015",
+    "CM50-2015",
+    "FL2025",
+    "GC<year>",
+    "SC<year>",
+    "ACL2022",
+    "ABM2010",
+    "IL2001",
+    "EWB",
+    "LOW",
+)
 MINIMUM_ANALYTICAL_ACTIONS = 1
 MAXIMUM_ANALYTICAL_ACTIONS = 3
 MINIMUM_SOURCE_CITATIONS = 1
@@ -255,6 +272,20 @@ def validate() -> int:
         if f"({SOURCE_KEY_FILE.rpartition('/')[2]})" not in body:
             errors.append(f"{relative_path} does not link the corroboration source key")
         validate_local_links(path, errors)
+
+    source_key_path = SKILL_ROOT / SOURCE_KEY_FILE
+    source_key_body = source_key_path.read_text(encoding="utf-8")
+    heading_index = source_key_body.find(RETRIEVAL_SECTION_HEADING)
+    if heading_index == -1:
+        errors.append(f"{SOURCE_KEY_FILE} is missing the retrieval-location section")
+    else:
+        retrieval_body = source_key_body[heading_index:]
+        for key_form in RETRIEVAL_KEY_FORMS:
+            if f"`{key_form}`" not in retrieval_body:
+                errors.append(
+                    f"{SOURCE_KEY_FILE} retrieval section is missing an entry for `{key_form}`"
+                )
+    validate_local_links(source_key_path, errors)
 
     for intent, cards in WORKFLOW_CARDS.items():
         if not MINIMUM_CARD_LOAD <= len(cards) <= MAXIMUM_CARD_LOAD:

@@ -191,7 +191,8 @@ and the Lowenstein biography.
 Each card carries abbreviated corroboration citations naming additional checked
 locations where its point is stated, applied, or qualified; the
 [source key](skills/buffett-investment-framework/references/00-source-key.md) resolves
-every abbreviation and explains the evidence character of each source.
+every abbreviation, explains the evidence character of each source, and gives a
+verified retrieval location for every citation key.
 
 This project is not affiliated with, approved by, or endorsed by Warren Buffett or
 Berkshire Hathaway.

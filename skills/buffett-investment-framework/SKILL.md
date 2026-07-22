@@ -144,6 +144,9 @@ Do not aggregate component dispositions into an investment recommendation.
   substitute for reading the source; treat its abbreviated corroboration citations,
   resolved in the [source key](references/00-source-key.md), as checked locations in the
   published record rather than proof of the card’s guidance.
+- When the user asks for the underlying writing, or a material finding must be checked
+  against the original, retrieve the document through the retrieval locations in the
+  [source key](references/00-source-key.md).
 - Preserve qualifications and contrary evidence.
 - Do not invent missing maintenance capital, segment results, reserves, probabilities,
   financing terms, or valuation inputs.
