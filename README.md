@@ -240,7 +240,7 @@ cp -R skills/buffett-investment-framework "${CODEX_HOME:-$HOME/.codex}/skills/"
 
 ## Development
 
-Development docs live in [development.md](development.md) and
+Development docs live in [docs/development.md](docs/development.md) and
 [viz/README.md](viz/README.md).
 
 ## License and Disclaimer

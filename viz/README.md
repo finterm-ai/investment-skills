@@ -18,8 +18,8 @@ open canvas-skills.html      # interactive canvas
 ./generate-posters.sh        # writes both poster PNGs to ./out (auto-fetches elkjs)
 ```
 
-The repo's top-level Makefile wraps these as `make setup`, `make open`, `make posters`,
-and `make images` (see `development.md`).
+The repo’s top-level Makefile wraps these as `make setup`, `make open`, `make posters`,
+and `make images` (see `docs/development.md`).
 
 The elkjs bundle and its license are gitignored (`vendor/.gitignore`) and fetched from
 unpkg by `vendor/fetch-elk.sh`; the other vendored assets are copies of unpublished
