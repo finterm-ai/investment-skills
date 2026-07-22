@@ -52,6 +52,7 @@ The first piece is the Buffett framework.
 Queued next: Munger, Graham, Marks, Fisher, Lynch, Sleep and Zakaria, Grantham,
 Greenblatt, and Druckenmiller.
 
+Check back here as we’re adding a new one each week!
 Primary sources and framework focus for each are in the [roadmap](docs/roadmap.md).
 
 ## Try It
@@ -197,24 +198,19 @@ Berkshire Hathaway.
 
 ### Design Choices
 
-- **Deterministic routing.** `scripts/framework.py` is a standard-library Python script;
+- **Deterministic routing:** `scripts/framework.py` is a standard-library Python script;
   no model chooses the card load.
   The same intent and topics always produce the same cards.
-- **A hard card cap.** 5–12 cards per pass: agent context is treated as a budget.
-- **A one-command validator.** `validate` checks the 65-card namespace and per-card
+- **A hard card cap:** 5–12 cards per pass; agent context is treated as a budget.
+- **A one-command validator:** `validate` checks the 65-card namespace and per-card
   field contracts.
-- **A structural authority boundary.** Cards return supported, challenged, or unresolved
+- **A structural authority boundary:** cards return supported, challenged, or unresolved
   findings.
 
 ## Other Install Methods
 
-Use the [`skills` CLI](https://github.com/vercel-labs/skills), which installs into
-whichever agent directories it detects:
-
-```bash
-npx skills add finterm-ai/investment-skills --skill buffett-investment-framework --yes
-```
-
+The `npx skills add` command in [Try It](#try-it) installs into whichever agent
+directories the CLI detects.
 Add `-g` to install for your user instead of the current project, `--copy` to install an
 independent snapshot rather than a symlink, and `--list` to see what a repository offers
 without installing it.
