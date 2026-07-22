@@ -81,8 +81,13 @@ REQUIRED_CARD_FIELDS = (
     "Corroboration",
 )
 SOURCE_KEY_FILE = "references/00-source-key.md"
+MINIMUM_ANALYTICAL_ACTIONS = 1
+MAXIMUM_ANALYTICAL_ACTIONS = 3
+MINIMUM_SOURCE_CITATIONS = 1
+MAXIMUM_SOURCE_CITATIONS = 3
 MINIMUM_CORROBORATION = 2
 MAXIMUM_CORROBORATION = 4
+MAXIMUM_DESCRIPTION_LENGTH = 1024
 CORROBORATION_KEY: re.Pattern[str] = re.compile(
     r"^(?:BH\d{4}|BPL\d{4}|OM1996|SI1984|WB50-2015|CM50-2015|FL2025|GC\d{4}"
     r"|SC\d{4}|ACL2022|ABM2010|IL2001"
@@ -214,14 +219,18 @@ def validate() -> int:
                     if action.strip()
                 ]
             )
-            if not 1 <= action_count <= 3:
+            if (
+                not MINIMUM_ANALYTICAL_ACTIONS
+                <= action_count
+                <= MAXIMUM_ANALYTICAL_ACTIONS
+            ):
                 errors.append(
-                    f"{match.group(1)} has {action_count} analytical actions; expected one to three"
+                    f"{match.group(1)} has {action_count} analytical actions; expected {MINIMUM_ANALYTICAL_ACTIONS} to {MAXIMUM_ANALYTICAL_ACTIONS}"
                 )
             source_count = len(SOURCE_ENTRY.findall(card_body))
-            if not 1 <= source_count <= 3:
+            if not MINIMUM_SOURCE_CITATIONS <= source_count <= MAXIMUM_SOURCE_CITATIONS:
                 errors.append(
-                    f"{match.group(1)} has {source_count} source citations; expected one to three"
+                    f"{match.group(1)} has {source_count} source citations; expected {MINIMUM_SOURCE_CITATIONS} to {MAXIMUM_SOURCE_CITATIONS}"
                 )
             role_count = len(SOURCE_ROLE.findall(card_body))
             if role_count != source_count:
@@ -289,8 +298,10 @@ def validate() -> int:
             errors.append("SKILL.md frontmatter is missing a description field")
         elif not desc_match.group(1).strip():
             errors.append("SKILL.md frontmatter has an empty description value")
-        elif len(desc_match.group(1).strip()) > 1024:
-            errors.append("SKILL.md frontmatter description exceeds 1,024 characters")
+        elif len(desc_match.group(1).strip()) > MAXIMUM_DESCRIPTION_LENGTH:
+            errors.append(
+                f"SKILL.md frontmatter description exceeds {MAXIMUM_DESCRIPTION_LENGTH} characters"
+            )
     validate_local_links(SKILL_PATH, errors)
 
     public_files = [
