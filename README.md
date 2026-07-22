@@ -1,49 +1,32 @@
 # The Investment Skill Lexicon
 
-**An in-depth reference of agent skills that distill how great investors think.**
+**How great investors think, distilled from primary sources.**
 
-## Why?
+The primary Buffett and Berkshire corpus runs 72 documents and about 950,000 words.
+This project extracts, analyzes, and condenses it (3,809 extracted insights and roughly
+3.4 billion tokens of processing) into 65 decision cards that an agent loads 5–12 at a
+time.
 
-Decades of investment thinking sit in writings, interviews, and filings that few people
-have time to read end to end.
+You can always ask an agent to “analyze this like Warren Buffett.”
+But the goal is not to role play an investor’s voice.
+Rather, we want an agent to apply the underlying frameworks and mental models used by
+that investor to real filings, memos, and theses without searching or reading the whole
+corpus into context.
 
-This project analyzes an investor or firm’s frameworks and mental models from primary
-sources like published writings, interviews, and filings, cross-checked with Finterm’s
-data sources and analysis tooling.
+The idea of this project is to spend the tokens and do heavy thinking once, then reuse
+the insights in a context-efficient way.
 
-An agent can apply the ideas in new situations without filling the context with the
-underlying corpus.
-
-## How Are These Skills Different?
-
-A simple prompt or skill can lead a model to emulate style superficially.
-But our goal is not to imitate the style of an investor.
-
-We want to give thorough, accurate context so agents apply mental frameworks rigorously.
-Our goals are:
-
-- **Broad extraction:** Use all available primary sources.
-  Fully process all of an input corpus and extract all plausible insights as a
-  preliminary step.
-- **Deep insights:** Analyze materials to uncover underlying, non-obvious mental
-  frameworks talented investors use.
-- **Reusable format:** The results are packaged in usable skill format for Claude Code,
-  Codex, or any other agent that reads the open [Agent Skills](https://agentskills.io)
-  standard.
-
-The idea is we should spend tokens and heavy thinking up front processing every
-available source and analyzing what insights are most compelling, then make it available
-cheaply to any agent or model.
+This works with Claude Code, Codex, or any agent that reads the open
+[Agent Skills](https://agentskills.io) standard.
 
 ## The Buffett Investment Framework
 
-**The Buffett investment framework** distills 950,000 words of primary Buffett and
+**The Buffett investment framework** distills \~2,300 pages of primary Buffett and
 Berkshire writing into **65 evidence-bounded decision cards** an agent can use.
 
 It is an agent skill for **evidence-bounded financial analysis, investment-memo review,
-and thesis evaluation**. It offers **three focused workflows** that surface
-**assumptions, counterarguments, missing evidence, and invalidation conditions**. Cards
-are loaded 5–12 at a time to keep context use efficient.
+and thesis evaluation**. It offers **three focused workflows** that surface assumptions,
+counterarguments, missing evidence, and invalidation conditions.
 
 The framework helps an agent reason about a business.
 It does not issue buy, sell, hold, entry-price, position-size, or trade instructions.
@@ -60,23 +43,16 @@ installed.
 
 ## A Growing Collection of Skills
 
-We see this “lexicon” as a growing collection.
-The first piece is the Buffett framework.
-Consider bookmarking this as we are refining the extractions and will add more each
-week!
+This “lexicon” is a growing collection of insights.
+Decades of investment thinking sit in writings, interviews, and filings that few people
+or even agents have time to analyze deeply.
+So we’re extracting these piece by piece.
 
-| Investor | Status | Primary sources | Framework focus |
-| --- | --- | --- | --- |
-| Warren Buffett | ✅ Complete | 48 Berkshire shareholder letters (1977–2024), the 1957–1970 partnership letters, *The Essays of Warren Buffett*, and *Buffett: The Making of an American Capitalist* | [buffett-investment-framework](skills/buffett-investment-framework/) applies Buffett’s investment frameworks and mental models, distilled into 65 decision cards, to financial analysis, investment-memo review, and thesis evaluation |
-| Charlie Munger | Queued | *Poor Charlie’s Almanack* (the Stripe Press edition is free online), Wesco Financial and Daily Journal meeting transcripts, “The Psychology of Human Misjudgment” | Mental models, inversion, and the psychology of misjudgment |
-| Benjamin Graham | Queued | *Security Analysis*, *The Intelligent Investor*, Graham-Newman letters, 1955 congressional testimony, late lectures | Margin of safety, Mr. Market, and quantitative value screens |
-| Howard Marks | Queued | About 160 Oaktree client memos (1990–present, public archive), *The Most Important Thing*, *Mastering the Market Cycle* | Risk versus loss, market cycles, and second-level thinking |
-| Philip Fisher | Queued | *Common Stocks and Uncommon Profits*, *Conservative Investors Sleep Well*, *Developing an Investment Philosophy* | Scuttlebutt research and the fifteen-point growth checklist |
-| Peter Lynch | Queued | *One Up on Wall Street*, *Beating the Street*, Worth magazine columns | Stock categories, growth at a reasonable price, and the everyday-knowledge edge |
-| Nick Sleep and Qais Zakaria | Queued | The Nomad Investment Partnership letters, 2001–2014, released free by the authors | Scale economies shared, destination analysis, and the cost of growth |
-| Jeremy Grantham | Queued | GMO quarterly letters and Viewpoints (public archive) | Bubbles, mean reversion, and asset-class regimes |
-| Joel Greenblatt | Queued | *You Can Be a Stock Market Genius*, *The Little Book That Beats the Market*, Columbia special-situations lectures | Spinoffs, special situations, and where structural mispricing hides |
-| Stanley Druckenmiller | Queued | Three decades of long-form talks and interviews, including the transcribed 2015 Lost Tree Club speech | Concentrated macro positioning, asymmetric bet sizing, and liquidity-regime reading |
+The first piece is the Buffett framework.
+Queued next: Munger, Graham, Marks, Fisher, Lynch, Sleep and Zakaria, Grantham,
+Greenblatt, and Druckenmiller.
+
+Primary sources and framework focus for each are in the [roadmap](docs/roadmap.md).
 
 ## Try It
 
