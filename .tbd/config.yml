@@ -1,0 +1,17 @@
+tbd_format: f06
+tbd_version: 0.4.1
+# tbd_upgrades: tbd versions that have run `tbd setup` in this repo (oldest first);
+# tbd_version above is the most recent. Informational; updated automatically by setup.
+tbd_upgrades:
+  - version: 0.4.1
+    at: 2026-07-22T16:27:06.123Z
+display:
+  id_prefix: isk
+sync:
+  branch: tbd-sync
+  remote: origin
+  storage: git-common-dir-v1
+settings:
+  auto_sync: false
+  doc_auto_sync_hours: 24
+  use_gh_cli: true
