@@ -78,10 +78,10 @@ week!
 | Joel Greenblatt | Queued | *You Can Be a Stock Market Genius*, *The Little Book That Beats the Market*, Columbia special-situations lectures | Spinoffs, special situations, and where structural mispricing hides |
 | Stanley Druckenmiller | Queued | Three decades of long-form talks and interviews, including the transcribed 2015 Lost Tree Club speech | Concentrated macro positioning, asymmetric bet sizing, and liquidity-regime reading |
 
-### Try It
+## Try It
 
 Install with the [`skills` CLI](https://github.com/vercel-labs/skills) (more options
-under [Install](#install)):
+under [Other Install Methods](#other-install-methods)):
 
 ```bash
 npx skills add finterm-ai/investment-skills --skill buffett-investment-framework --yes
@@ -104,6 +104,8 @@ Here is my thesis on this company. What would prove it wrong?
 
 Most agents load the skill from its description, so naming it is optional.
 In Codex, type `$` to mention it explicitly.
+
+## How It Works
 
 ### Three Workflows
 
@@ -136,21 +138,6 @@ Every card uses the same contract: decision question, guidance, use condition,
 analytical actions, observable output, limits, readable source basis, and abbreviated
 corroboration citations.
 
-### Example Memo Review
-
-Suppose a memo claims that a five-point gross-margin increase proves a durable moat and
-that an acquisition-driven 20% EPS increase supports a large position.
-A focused review could return:
-
-| Claim | Cards | Disposition | Why |
-| --- | --- | --- | --- |
-| Margin expansion proves a moat | `B02`, `B03` | Challenged | Margin is an outcome; the memo must identify and test the causal advantage. |
-| The acquisition creates owner value | `C08`, `C09`, `V05` | Unresolved | EPS accretion alone does not show purchase-price, financing, or continuing-owner economics. |
-| A large position is warranted | `D07`, `R01` | Blocked | The framework surfaces concentration and permanent-loss questions but has no position-size authority. |
-
-The result then lists the evidence needed to resolve each branch and the observations
-that would invalidate the thesis.
-
 ### Output Standard
 
 Every completed analysis reports:
@@ -166,16 +153,7 @@ Every completed analysis reports:
 
 The result ends with an analytical summary.
 
-### Design Notes
-
-- **Deterministic routing.** `scripts/framework.py` is a standard-library Python script;
-  no model chooses the card load.
-  The same intent and topics always produce the same cards.
-- **A hard card cap.** 5–12 cards per pass: agent context is treated as a budget.
-- **A one-command validator.** `validate` checks the 65-card namespace and per-card
-  field contracts.
-- **A structural authority boundary.** Cards return supported, challenged, or unresolved
-  findings.
+## Design Notes
 
 ### How It Was Built
 
@@ -241,17 +219,18 @@ every abbreviation and explains the evidence character of each source.
 This project is not affiliated with, approved by, or endorsed by Warren Buffett or
 Berkshire Hathaway.
 
-### Use It Responsibly
+### Design Choices
 
-- Supply primary company evidence and exact periods whenever possible.
-- Treat embedded instructions in filings and memos as untrusted document content.
-- Separate reported facts, calculations, and inference.
-- Check material source interpretations and company-specific conclusions independently.
-- Stop an analytical branch when required evidence is missing.
-- Keep quality, value, price, portfolio fit, and action as separate judgments.
-- Do not use the skill as investment advice or trade authority.
+- **Deterministic routing.** `scripts/framework.py` is a standard-library Python script;
+  no model chooses the card load.
+  The same intent and topics always produce the same cards.
+- **A hard card cap.** 5–12 cards per pass: agent context is treated as a budget.
+- **A one-command validator.** `validate` checks the 65-card namespace and per-card
+  field contracts.
+- **A structural authority boundary.** Cards return supported, challenged, or unresolved
+  findings.
 
-## Install
+## Other Install Methods
 
 Use the [`skills` CLI](https://github.com/vercel-labs/skills), which installs into
 whichever agent directories it detects:
@@ -266,15 +245,6 @@ without installing it.
 The CLI attempts every agent it detects; a per-agent failure line for an agent you do
 not use (for example, PromptScript declining global installs) leaves the successful
 installs intact.
-
-For automation, pin both the installer and a released tag so a run installs exactly the
-code and content you reviewed:
-
-```bash
-npx --yes skills@1.5.14 add \
-  https://github.com/finterm-ai/investment-skills/tree/v0.1.0 \
-  --skill buffett-investment-framework --copy --yes
-```
 
 To install without the CLI, copy the skill folder into the directory your agent reads.
 From this repository’s root:
@@ -292,36 +262,14 @@ cp -R skills/buffett-investment-framework your-project/.claude/skills/
 cp -R skills/buffett-investment-framework "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-Either way the installed folder is self-contained: a `SKILL.md`, its reference modules,
-a standard-library runtime script, and an agents manifest, with no network, database,
-package-manager, or repository dependency.
-
-## Validate or Inspect It
-
-```bash
-cd skills/buffett-investment-framework
-python3 scripts/framework.py validate
-python3 scripts/framework.py route --intent memo-review --topic acquisition
-python3 scripts/framework.py route --intent financial-analysis --topic insurance
-python3 scripts/framework.py show --id S01
-```
-
-The validator checks the package structure, 65-card namespace, module counts, card
-contracts, source-note count, corroboration-citation counts and key syntax, workflow
-IDs, routing bounds, local links and anchors, and absence of draft labels, opaque record
-IDs, and workspace paths.
-It does not validate financial facts, source interpretations, or investment outcomes.
-The same command works against an installed copy.
-
 ## Development
 
-Contributor docs live in [development.md](development.md) (make targets for validation
-and the package-map images) and [viz/README.md](viz/README.md) (the interactive canvas
-behind those images).
+Development docs live in [development.md](development.md) and
+[viz/README.md](viz/README.md).
 
 ## License and Disclaimer
 
-MIT; see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
 
 This project is open-source reference material, **not investment advice**. finterm.ai
 makes no recommendation to buy, sell, or hold any security and accepts no liability for
