@@ -182,3 +182,7 @@ module by default. Abbreviated corroboration citations resolve in the
   - **Berkshire Hathaway 1988 annual letter** — *qualifies*: exceptional management can
     overcome mediocre industry economics.
 - **Corroboration:** EWB §II.F; OM1996; BH2014; FL2025.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

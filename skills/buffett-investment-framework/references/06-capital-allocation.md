@@ -232,3 +232,7 @@ Abbreviated corroboration citations resolve in the [source key](00-source-key.md
   - **Berkshire Hathaway 2017 annual letter** — *supports*: deal hunger recruits biased
     forecasts and synergies.
 - **Corroboration:** EWB §IV.A; EWB §IV.D; BH2014; LOW ch.12 (acquisition ego cases).
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

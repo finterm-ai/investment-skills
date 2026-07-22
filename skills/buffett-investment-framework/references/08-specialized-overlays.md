@@ -303,3 +303,7 @@ Abbreviated corroboration citations resolve in the [source key](00-source-key.md
   - **Berkshire Hathaway 1988 annual letter** — *implements*: four question arbitrage
     analysis.
 - **Corroboration:** EWB §II.B; BPL1964.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

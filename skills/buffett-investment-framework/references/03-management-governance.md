@@ -207,3 +207,7 @@ Abbreviated corroboration citations resolve in the [source key](00-source-key.md
   - **Berkshire Hathaway 2010 annual letter** — *implements*: document emergency
     successors with strengths and weaknesses.
 - **Corroboration:** CM50-2015; BH2014; FL2025.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

@@ -183,3 +183,7 @@ Abbreviated corroboration citations resolve in the [source key](00-source-key.md
   - **Berkshire Hathaway 1996 annual letter** — *qualifies*: do not sell fine businesses
     on scary news alone.
 - **Corroboration:** EWB §II.E; BPL1967; BH2014.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

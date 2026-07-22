@@ -1,4 +1,4 @@
-# The Investment Skill Lexicon
+# The Investment Skills Lexicon
 
 **How great investors think, distilled from primary sources.**
 

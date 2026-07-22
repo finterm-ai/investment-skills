@@ -1,6 +1,6 @@
 # Roadmap
 
-The Investment Skill Lexicon is a growing collection.
+The Investment Skills Lexicon is a growing collection.
 The [Buffett framework](../skills/buffett-investment-framework/) is complete and
 installable today; the frameworks below are queued, listed with the primary sources each
 distillation will draw from.
@@ -19,3 +19,7 @@ distillation will draw from.
 | Stanley Druckenmiller | Queued | Three decades of long-form talks and interviews, including the transcribed 2015 Lost Tree Club speech | Concentrated macro positioning, asymmetric bet sizing, and liquidity-regime reading |
 
 Install and usage instructions are in the [main README](../README.md).
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

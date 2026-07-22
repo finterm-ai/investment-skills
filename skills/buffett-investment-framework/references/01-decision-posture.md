@@ -236,3 +236,7 @@ Abbreviated corroboration citations resolve in the [source key](00-source-key.md
   - **Berkshire Hathaway 2000 annual letter** — *supports*: bubble markets enable
     investor extraction business models.
 - **Corroboration:** EWB §II.G; BPL1965; BH2023.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

@@ -160,3 +160,7 @@ Abbreviated corroboration citations resolve in the [source key](00-source-key.md
     overpayment from earnings overestimate.
 - **Corroboration:** EWB §II.D; BH2025; LOW ch.5 (franchise-value margin evolution); LOW
   ch.8 (Washington Post discount case).
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

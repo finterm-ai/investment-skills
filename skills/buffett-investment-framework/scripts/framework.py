@@ -104,7 +104,7 @@ SOURCE_ROLE: re.Pattern[str] = re.compile(
     r"\*(defines|supports|implements|illustrates|qualifies|specializes)\*:"
 )
 CARD_FIELD: re.Pattern[str] = re.compile(
-    r"^- \*\*(?P<label>[^:]+):\*\*\s*(?P<value>.*?)(?=^- \*\*|^<a id=|\Z)",
+    r"^- \*\*(?P<label>[^:]+):\*\*\s*(?P<value>.*?)(?=^- \*\*|^<a id=|^<!--|\Z)",
     re.MULTILINE | re.DOTALL,
 )
 UNPUBLISHABLE_TEXT = {
@@ -384,6 +384,9 @@ def show(card_id: str) -> int:
         if match.group(1) != normalized:
             continue
         end = matches[index + 1].start() if index + 1 < len(matches) else len(body)
+        footer_start = body.find("\n<!--", match.end(), end)
+        if footer_start != -1:
+            end = footer_start
         if index + 1 < len(matches):
             next_anchor = body.rfind("\n<a id=", match.end(), end)
             if next_anchor != -1:

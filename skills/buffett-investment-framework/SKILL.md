@@ -183,3 +183,7 @@ corroboration citations reconciled against the wider published record and resolv
 the [source key](references/00-source-key.md), and its own preserved limits.
 The framework is not affiliated with or endorsed by Warren Buffett or Berkshire
 Hathaway.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

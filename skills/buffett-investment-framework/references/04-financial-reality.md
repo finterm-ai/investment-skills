@@ -186,3 +186,7 @@ default. Abbreviated corroboration citations resolve in the
   - **Berkshire Hathaway 2003 annual letter** — *qualifies*: derivatives company
     disclosures cannot reveal the full risk.
 - **Corroboration:** EWB §V.H; BH2002.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->

@@ -45,3 +45,7 @@ Corroboration entries were reconciled against the project’s full source collec
 including sources published after the material the cards were first synthesized from.
 They provide representative, not exhaustive, coverage; check the original writing and
 the company evidence under analysis before relying on any card.
+
+<!-- This document follows common-doc-guidelines.md.
+See github.com/jlevy/practical-prose and review guidelines before editing.
+-->
